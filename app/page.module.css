@@ -1,6 +1,29 @@
 .main {
   padding: 6rem;
   min-height: 100vh;
-  max-width: 500px;
+  max-width: 5000px;
   margin: 0 auto;
+}
+
+.projectsSection {
+  margin-top: 6rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.projectCard {
+  border: 0.125rem solid var(--primary);
+  border-radius: var(--border-radius);
+  display: block;
+  padding: 1rem;
+}
+
+.projectCardImage {
+  object-fit: cover;
+  border-radius: var(--border-radius);
 }
