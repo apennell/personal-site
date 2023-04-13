@@ -1,13 +1,13 @@
 import type { Rule } from "sanity";
 
-const project = {
-  name: "project",
-  title: "Projects",
+const page = {
+  name: "page",
+  title: "Pages",
   type: "document",
   fields: [
     {
-      name: "name",
-      title: "Name",
+      name: "title",
+      title: "Title",
       type: "string",
       validation: (Rule: Rule) => Rule.required(),
     },
@@ -15,16 +15,11 @@ const project = {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "name", maxLength: 96 },
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
       validation: (Rule: Rule) => Rule.required(),
-    },
-    { name: "url", title: "URL", type: "url" },
-    {
-      name: "image",
-      title: "image",
-      type: "image",
-      options: { hotspot: true },
-      fields: [{ name: "alt", title: "Alt", type: "string" }],
     },
     {
       name: "content",
@@ -35,4 +30,4 @@ const project = {
   ],
 };
 
-export default project;
+export default page;

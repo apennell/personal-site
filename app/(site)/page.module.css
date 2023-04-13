@@ -1,12 +1,11 @@
 .main {
   padding: 6rem;
-  min-height: 100vh;
   max-width: 5000px;
   margin: 0 auto;
 }
 
 .projectsSection {
-  margin-top: 6rem;
+  padding-top: 6rem;
 }
 
 .projects {

@@ -12,7 +12,7 @@ export default async function Home() {
         Ethical software engineering for a more sustainable and accessible world
       </h1>
 
-      <div>
+      <div className={styles.projectsSection}>
         <h2>My projects</h2>
         <ul className={styles.projects}>
           {projects.map((project) => (
