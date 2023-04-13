@@ -12,7 +12,7 @@ export default async function Home() {
         Ethical software engineering for a more sustainable and accessible world
       </h1>
 
-      <section className={styles.projectsSection}>
+      <div>
         <h2>My projects</h2>
         <ul className={styles.projects}>
           {projects.map((project) => (
@@ -32,7 +32,7 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-      </section>
+      </div>
     </main>
   );
 }
