@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "./layout.module.css";
 import "../globals.css";
-import { getAllPages } from "@/sanity/sanity-utils";
 
 export const metadata = {
   title: "Annie Pennell | Software Engineer",
@@ -14,7 +13,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pages = await getAllPages();
+  const navLinks = [
+    {
+      _id: "contact",
+      href: "#contact",
+      title: "Contact Me",
+    },
+  ];
 
   return (
     <html lang="en">
@@ -24,15 +29,15 @@ export default async function RootLayout({
             <Link href="/" className={styles.homeLink}>
               Annie Pennell
             </Link>
-            {pages?.length > 0 && (
+            {navLinks.length > 0 && (
               <div className={styles.navItems}>
-                {pages.map((page) => (
+                {navLinks.map((link) => (
                   <Link
-                    key={`${page._id}-nav`}
-                    href={`/${page.slug}`}
+                    key={`${link._id}-nav`}
+                    href={`/${link.href}`}
                     className={styles.navItem}
                   >
-                    {page.title}
+                    {link.title}
                   </Link>
                 ))}
               </div>
