@@ -1,20 +1,109 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.125rem solid var(--black);
+  align-items: stretch;
+  border-bottom: 2px solid var(--black);
 }
 
-.homeLink {
-  padding: 1.5rem;
-  font-weight: 600;
-}
-
-.navItems {
-  display: flex;
-  justify-content: space-between;
+p.homeLink {
+  font-family: var(--font-mono);
+  margin-bottom: 0;
+  padding: 1rem;
+  flex-grow: 2;
+  align-self: center;
 }
 
 .navItem {
-  padding: 1.5rem;
-  border-inline-start: 0.125rem solid var(--black);
+  padding: 1rem;
+  border-inline-start: 2px solid var(--black);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+}
+
+.navItem a {
+  white-space: nowrap;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.footerContent {
+  align-self: center;
+  flex-grow: 2;
+  flex-basis: 100%;
+  border: 2px solid var(--black);
+}
+
+.footerContent p {
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.footerLinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerLinksGroup {
+  display: flex;
+  text-align: center;
+  flex-grow: 1;
+  border-top: 2px solid var(--black);
+  border-inline-end: 2px solid var(--black);
+}
+
+.footerItem {
+  padding: 1rem;
+  border-inline-start: 2px solid var(--black);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.footerItem a {
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) {
+  p.homeLink,
+  .navItem,
+  .footerContent p,
+  .footerItem {
+    padding: 1.5rem 2rem;
+  }
+
+  .footerLinksContainer {
+    flex-grow: 1;
+    border-inline-end: 2px solid var(--black);
+  }
+
+  .footerLinksGroup {
+    border: none;
+    border-top: 2px solid var(--black);
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1121px) {
+  .footer {
+    border-top: 2px solid var(--black);
+  }
+
+  .footerContent {
+    flex-basis: auto;
+    border: none;
+  }
+
+  .footerLinksContainer,
+  .footerLinksGroup {
+    border: none;
+  }
 }

@@ -1,0 +1,93 @@
+.display,
+.headline,
+.titleLg,
+.titleSm {
+  font-family: var(--font-mono);
+}
+
+.display {
+  font-size: 2rem; /* 32px */
+  letter-spacing: 0.0156em; /* 0.25px */
+  line-height: 2.875rem; /* 46px */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.headline {
+  font-size: 1.3125rem; /* 21px */
+  letter-spacing: 0.0125em; /* 0.2px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+.titleLg {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  letter-spacing: 0.009em; /* 0.15px */
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.titleSm {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25; /* 20px */
+  letter-spacing: 0.006em; /* 0.1px */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.body1 {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  letter-spacing: 0.0313em; /* 0.5px */
+  margin-bottom: 1.25rem;
+}
+
+.body2 {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  letter-spacing: 0.0156em; /* 0.25px */
+  margin-bottom: 1rem;
+}
+
+.monoLink {
+  font-family: var(--font-mono);
+}
+
+.button {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  letter-spacing: 0.078em; /* 1.25px */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) {
+  .display {
+    font-size: 2.25rem; /* 36px */
+    letter-spacing: 0.0156em; /* 0.25px */
+  }
+
+  .headline {
+    font-size: 1.5rem; /* 24px */
+    letter-spacing: 0.0125em; /* 0.2px */
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1121px) {
+  .display {
+    font-size: 3.0625rem; /* 49px */
+    line-height: 3.375rem; /* 54px */
+    margin-bottom: 2rem;
+  }
+
+  .headline {
+    font-size: 2.1875rem; /* 35px */
+    letter-spacing: 0.0156em; /* 0.25px */
+    line-height: 2.875rem; /* 46px */
+    margin-bottom: 1.5rem;
+  }
+}
