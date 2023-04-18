@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  border-bottom: 2px solid var(--black);
+  border-bottom: 2px solid var(--foreground);
 }
 
 p.homeLink {
@@ -15,7 +15,7 @@ p.homeLink {
 
 .navItem {
   padding: 1rem;
-  border-inline-start: 2px solid var(--black);
+  border-inline-start: 2px solid var(--foreground);
   font-family: var(--font-mono);
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@ p.homeLink {
   align-self: center;
   flex-grow: 2;
   flex-basis: 100%;
-  border: 2px solid var(--black);
+  border: 2px solid var(--foreground);
 }
 
 .footerContent p {
@@ -53,13 +53,13 @@ p.homeLink {
   display: flex;
   text-align: center;
   flex-grow: 1;
-  border-top: 2px solid var(--black);
-  border-inline-end: 2px solid var(--black);
+  border-top: 2px solid var(--foreground);
+  border-inline-end: 2px solid var(--foreground);
 }
 
 .footerItem {
   padding: 1rem;
-  border-inline-start: 2px solid var(--black);
+  border-inline-start: 2px solid var(--foreground);
   font-family: var(--font-mono);
   display: flex;
   align-items: center;
@@ -82,19 +82,19 @@ p.homeLink {
 
   .footerLinksContainer {
     flex-grow: 1;
-    border-inline-end: 2px solid var(--black);
+    border-inline-end: 2px solid var(--foreground);
   }
 
   .footerLinksGroup {
     border: none;
-    border-top: 2px solid var(--black);
+    border-top: 2px solid var(--foreground);
   }
 }
 
 /* Large desktop */
 @media (min-width: 1121px) {
   .footer {
-    border-top: 2px solid var(--black);
+    border-top: 2px solid var(--foreground);
   }
 
   .footerContent {

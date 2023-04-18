@@ -23,13 +23,6 @@
   --background: var(--white);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: var(--white);
-    --background: var(--black);
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -109,10 +102,4 @@ h4 {
   letter-spacing: 0.006em; /* 0.1px */
   font-weight: 500;
   margin-bottom: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
