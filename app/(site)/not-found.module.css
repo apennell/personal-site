@@ -1,0 +1,35 @@
+.main {
+  padding: 2rem;
+  background-color: var(--purple);
+}
+
+.hero {
+  max-width: 25rem;
+  margin: 2rem auto;
+}
+
+.heroBox {
+  padding: 2rem;
+  position: relative;
+  background: var(--background);
+  border: 4px solid var(--foreground);
+  box-shadow: 8px 8px 0px var(--foreground);
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) {
+  .hero {
+    max-width: 38rem;
+    margin: 4rem auto;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1121px) {
+  .main {
+    padding: 6rem;
+  }
+  .hero {
+    max-width: 50rem;
+  }
+}
