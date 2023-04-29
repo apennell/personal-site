@@ -1,14 +1,38 @@
 .heroSection {
   padding: 2rem;
   background-color: var(--purple);
+  position: relative;
+}
+
+.heroCard {
+  margin: 2rem auto;
+}
+
+.star {
+  position: absolute;
+  bottom: -1.75rem;
+  left: calc(50% - 1.5rem);
+  font-size: 3rem;
 }
 
 .aboutSection {
   padding: 4rem 2rem;
 }
 
+.aboutCard {
+  margin-bottom: 4rem;
+}
+
+.aboutCard h2 {
+  margin-bottom: 0;
+}
+
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) {
+  .heroCard {
+    margin: 4rem auto;
+  }
+
   .aboutSection {
     padding: 6rem 4rem;
   }
