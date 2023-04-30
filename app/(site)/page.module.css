@@ -1,18 +1,10 @@
 .heroSection {
   padding: 2rem;
   background-color: var(--purple);
-  position: relative;
 }
 
 .heroCard {
   margin: 2rem auto;
-}
-
-.star {
-  position: absolute;
-  bottom: -1.75rem;
-  left: calc(50% - 1.5rem);
-  font-size: 3rem;
 }
 
 .aboutSection {
@@ -21,6 +13,7 @@
 
 .aboutCard {
   margin-bottom: 4rem;
+  background-color: var(--pink);
 }
 
 .aboutCard h2 {

@@ -30,20 +30,14 @@ export default async function Home() {
             </a>
           </p>
         </Card>
-        <span aria-hidden className={styles.star}>
-          ✴
-        </span>{" "}
       </div>
+
       <div className={styles.aboutSection}>
         <div className={styles.sectionContainer}>
-          <Card size="sm" customClass={styles.aboutCard}>
-            <h2 className={typog.headline}>
-              Solution-seeking software engineer <br />
-              <span className={typog.titleLg}>
-                driven by a deep desire to learn, grow, share, and create.
-              </span>
-            </h2>
-          </Card>
+          <h2 className={`${typog.headline} ${typog.highlight}`}>
+            Solution-seeking software engineer driven by a deep desire to learn,
+            grow, share, and create.
+          </h2>
           <p>
             I’ve been a working software engineer since 2015, which includes
             what I call “super full stack”—from design and project management

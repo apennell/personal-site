@@ -1,6 +1,6 @@
 .display,
 .headline,
-.titleLg,
+/* .titleLg, */
 .titleSm {
   font-family: var(--font-mono);
 }
@@ -17,13 +17,13 @@
   font-size: 1.3125rem; /* 21px */
   letter-spacing: 0.0125em; /* 0.2px */
   line-height: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 1.25rem;
 }
 
 .titleLg {
   font-size: 1.125rem; /* 18px */
-  line-height: 1.5rem; /* 24px */
+  line-height: 1.75rem; /* 24px */
   letter-spacing: 0.009em; /* 0.15px */
   font-weight: 400;
   margin-bottom: 1rem;
@@ -42,6 +42,7 @@
   line-height: 1.5rem; /* 24px */
   letter-spacing: 0.0313em; /* 0.5px */
   margin-bottom: 1.25rem;
+  font-weight: 400;
 }
 
 .body2 {
@@ -49,6 +50,7 @@
   line-height: 1.25rem; /* 20px */
   letter-spacing: 0.0156em; /* 0.25px */
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .monoLink {
@@ -103,4 +105,19 @@
   .titleSm {
     /* 20px */
   }
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight:after {
+  background-color: var(--green);
+  content: " ";
+  height: 30%;
+  position: absolute;
+  left: 0;
+  top: 65%;
+  width: calc(100% + 2.75rem);
+  z-index: -1;
 }
