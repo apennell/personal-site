@@ -11,13 +11,11 @@
   padding: 4rem 2rem;
 }
 
-.aboutCard {
-  margin-bottom: 4rem;
-  background-color: var(--pink);
+.aboutHeadlineLg {
 }
 
-.aboutCard h2 {
-  margin-bottom: 0;
+.aboutHeadlineSm {
+  display: inline-block;
 }
 
 /* Tablet and Smaller Desktop */
@@ -45,4 +43,19 @@
     max-width: 50rem;
     margin: 0 auto;
   }
+}
+
+.aboutHeadlineSm {
+  position: relative;
+}
+
+.aboutHeadlineSm:after {
+  background-color: var(--green);
+  content: " ";
+  height: 65%;
+  position: absolute;
+  left: -0.625rem;
+  top: 0.6rem;
+  width: 100%;
+  z-index: -1;
 }

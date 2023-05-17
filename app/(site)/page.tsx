@@ -34,9 +34,13 @@ export default async function Home() {
 
       <div className={styles.aboutSection}>
         <div className={styles.sectionContainer}>
-          <h2 className={`${typog.headline} ${typog.highlight}`}>
-            Solution-seeking software engineer driven by a deep desire to learn,
-            grow, share, and create.
+          <h2 className={typog.headline}>
+            <span className={styles.aboutHeadlineLg}>
+              Solution-seeking software engineer,{" "}
+            </span>
+            <span className={`${typog.titleSm} ${styles.aboutHeadlineSm}`}>
+              driven by the need to learn, grow, share, and create.
+            </span>
           </h2>
           <p>
             I’ve been a working software engineer since 2015, which includes
@@ -59,7 +63,10 @@ export default async function Home() {
             my backyard in Richmond, CA, where I enjoy being distracted by the
             birds who stop by my window and taking breaks to roller skate. I
             spend too much time thinking about how much water my plants need and
-            which planner to use this week.
+            which planner to use this week. I’m always creating things in many
+            mediums and learning new skills, whether that means building a
+            website in a programming language I don’t know yet or taking a
+            woodworking class at the local art center.
           </p>
         </div>
       </div>

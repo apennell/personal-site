@@ -68,7 +68,6 @@ p {
 
 h1,
 h2,
-h3,
 h4 {
   font-family: var(--font-mono);
 }
@@ -94,6 +93,7 @@ h3 {
   letter-spacing: 0.009em; /* 0.15px */
   font-weight: 400;
   margin-bottom: 1rem;
+  font-family: var(--font-sans);
 }
 
 h4 {
