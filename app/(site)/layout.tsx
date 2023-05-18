@@ -10,7 +10,7 @@ export const metadata = {
     "Making the Web better for the world and the people in it through ethical software engineering, driven by accessibility and sustainable web practices. Providing frontend engineering and development, audits and consulting on a11y and sustainable web development, platform localization/i18n services, career coaching, and more.",
 };
 
-const sans = Inter({ variable: "--font-sans", subsets: ["latin"] });
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export default async function RootLayout({
   children,
@@ -18,8 +18,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={sans.variable}>
+    <html lang="en" className={inter.variable}>
+      <body>
         <Header />
         {children}
         <Footer />

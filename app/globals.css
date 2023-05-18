@@ -1,9 +1,10 @@
 :root {
   --content-max-width: 36rem;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-sans: var(--font-inter), Tahoma, Verdana, Helvetica, sans-serif;
+  --font-mono: Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Courier New", Courier, monospace;
 
   --primary: #9966cc;
   --secondary: #2c4815;
