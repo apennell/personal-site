@@ -1,6 +1,7 @@
 .heroSection {
   padding: 2rem;
   background-color: var(--purple);
+  border-bottom: 2px solid var(--foreground);
 }
 
 .heroCard {
@@ -11,11 +12,16 @@
   padding: 4rem 2rem;
 }
 
-.aboutHeadlineLg {
-}
-
 .aboutHeadlineSm {
   display: inline-block;
+}
+
+.bottomSection {
+  padding: 6rem 4rem;
+  background-color: var(--purple);
+  border-top: 2px solid var(--foreground);
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Tablet and Smaller Desktop */

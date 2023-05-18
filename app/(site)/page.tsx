@@ -35,9 +35,7 @@ export default async function Home() {
       <div className={styles.aboutSection}>
         <div className={styles.sectionContainer}>
           <h2 className={typog.headline}>
-            <span className={styles.aboutHeadlineLg}>
-              Solution-seeking software engineer,{" "}
-            </span>
+            Solution-seeking software engineer,{" "}
             <span className={`${typog.titleSm} ${styles.aboutHeadlineSm}`}>
               driven by the need to learn, grow, share, and create.
             </span>
@@ -69,6 +67,12 @@ export default async function Home() {
             woodworking class at the local art center.
           </p>
         </div>
+      </div>
+
+      <div className={styles.bottomSection}>
+        <a href="mailto:annie@sparkbird.works" className={typog.buttonWhite}>
+          Work with me
+        </a>
       </div>
     </main>
   );
