@@ -43,6 +43,7 @@
   letter-spacing: 0.0313em; /* 0.5px */
   margin-bottom: 1.25rem;
   font-weight: 400;
+  font-family: var(--font-sans);
 }
 
 .body2 {
@@ -51,6 +52,7 @@
   letter-spacing: 0.0156em; /* 0.25px */
   margin-bottom: 1rem;
   font-weight: 400;
+  font-family: var(--font-sans);
 }
 
 .monoLink {

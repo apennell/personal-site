@@ -32,7 +32,7 @@ export default async function Home() {
         </Card>
       </div>
 
-      <div className={styles.aboutSection}>
+      <div className={styles.section}>
         <div className={styles.sectionContainer}>
           <h2 className={typog.headline}>
             Solution-seeking software engineer,{" "}
@@ -41,10 +41,10 @@ export default async function Home() {
             </span>
           </h2>
           <p>
-            I’ve been a working software engineer since 2015, which includes
-            what I call “super full stack”—from design and project management
-            all the way to backend—but I mostly stick to what I love, which is
-            building the front end of beatiful interfaces. I am very design- and
+            I’ve been a software engineer since 2015, which includes what I call
+            “super full stack” development: everything from design and project
+            management all the way to backend. Mostly, though, stick to what I
+            really love, which is building front end. I am very design- and
             product-oriented, so I’m great at bridging designs to their
             production build.
           </p>
@@ -54,7 +54,9 @@ export default async function Home() {
             and others to provide freelance engineering, consulting, and
             coaching. I’m a huge advocate for accessibility (a11y) and
             sustainability in design and development, and these are the backbone
-            of my studio’s work.
+            of my studio’s work. I am tenacious when it comes to navigating
+            complex systems and difficult problems and I love using this skill
+            to help others do the same.
           </p>
           <p>
             On most days, you can find me working from a little office studio in
@@ -66,6 +68,50 @@ export default async function Home() {
             website in a programming language I don’t know yet or taking a
             woodworking class at the local art center.
           </p>
+        </div>
+      </div>
+
+      <div className={`${styles.section} ${styles.greenSection}`}>
+        <div className={styles.sectionContainer}>
+          <Card size="sm">
+            <h2 className={typog.headline}>Services</h2>
+            <ul className={typog.titleSm}>
+              <li>Frontend engineering for web applications and websites</li>
+              <li>
+                Consulting, implementation, and team training in areas of
+                expertise, including:
+                <ul>
+                  <li className={typog.body2}>Web accessibility (a11y)</li>
+                  <li className={typog.body2}>
+                    Localization (l10n), internationalization (i18n), and
+                    translation integrations
+                  </li>
+                  <li className={typog.body2}>
+                    Sustainability in web design and development
+                  </li>
+                  <li className={typog.body2}>
+                    Sanity.io CMS content structuring
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Career support, advice, and coaching for early and mid career
+                folks, especially around topics such as:
+                <ul>
+                  <li className={typog.body2}>
+                    Navigating life after college{" "}
+                    <i>(help! I got a humanities degree!)</i>
+                  </li>
+                  <li className={typog.body2}>
+                    Trying to land your first job out of a coding bootcamp{" "}
+                  </li>
+                  <li className={typog.body2}>
+                    Making tough decisions and evaluating what’s next
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </Card>
         </div>
       </div>
 
