@@ -8,8 +8,13 @@
   margin: 2rem auto;
 }
 
-.aboutSection {
+.section {
   padding: 4rem 2rem;
+  border-bottom: 2px solid var(--foreground);
+}
+
+.greenSection {
+  background-color: var(--green);
 }
 
 .aboutHeadlineSm {
@@ -19,7 +24,6 @@
 .bottomSection {
   padding: 6rem 4rem;
   background-color: var(--purple);
-  border-top: 2px solid var(--foreground);
   margin: 0 auto;
   text-align: center;
 }
@@ -30,7 +34,7 @@
     margin: 4rem auto;
   }
 
-  .aboutSection {
+  .section {
     padding: 6rem 4rem;
   }
 }
@@ -41,7 +45,7 @@
     padding: 6rem;
   }
 
-  .aboutSection {
+  .section {
     padding: 6rem;
   }
 

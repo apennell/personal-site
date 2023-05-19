@@ -1,6 +1,6 @@
 .container {
   max-width: 25rem;
-  /* margin: 2rem auto; */
+  margin: 0 auto;
 }
 
 .box-lg {
@@ -23,7 +23,6 @@
 @media (min-width: 701px) {
   .container {
     max-width: 38rem;
-    /* margin: 4rem auto; */
   }
 }
 
