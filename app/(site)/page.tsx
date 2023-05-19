@@ -81,15 +81,15 @@ export default async function Home() {
                 Consulting, implementation, and team training in areas of
                 expertise, including:
                 <ul>
-                  <li className={typog.body1}>Web accessibility (a11y)</li>
-                  <li className={typog.body1}>
+                  <li className={typog.body2}>Web accessibility (a11y)</li>
+                  <li className={typog.body2}>
                     Localization (l10n), internationalization (i18n), and
                     translation integrations
                   </li>
-                  <li className={typog.body1}>
+                  <li className={typog.body2}>
                     Sustainability in web design and development
                   </li>
-                  <li className={typog.body1}>
+                  <li className={typog.body2}>
                     Sanity.io CMS content structuring
                   </li>
                 </ul>
@@ -98,14 +98,14 @@ export default async function Home() {
                 Career support, advice, and coaching for early and mid career
                 folks, especially around topics such as:
                 <ul>
-                  <li className={typog.body1}>
+                  <li className={typog.body2}>
                     Navigating life after college{" "}
                     <i>(help! I got a humanities degree!)</i>
                   </li>
-                  <li className={typog.body1}>
+                  <li className={typog.body2}>
                     Trying to land your first job out of a coding bootcamp{" "}
                   </li>
-                  <li className={typog.body1}>
+                  <li className={typog.body2}>
                     Making tough decisions and evaluating what’s next
                   </li>
                 </ul>
