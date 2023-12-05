@@ -12,7 +12,7 @@
   "dependencies": {
     "@portabletext/react": "^2.0.2",
     "@sanity/ui": "^1.9.3",
-    "@sanity/vision": "^3.20.2",
+    "@tgwf/co2": "^0.13.9",
     "@types/node": "18.15.11",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",

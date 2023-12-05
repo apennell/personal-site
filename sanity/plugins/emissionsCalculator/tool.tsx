@@ -10,7 +10,7 @@ export const emissionsCalculatorTool =
       name: "emissions-calculator",
       tools: [
         {
-          name: name || "emissions-calculator-tool",
+          name: name || "emissions-calculator",
           title: title || "Emissions",
           icon: Boolean(icon) ? icon : () => <span>🪴</span>,
           component: EmissionsCalculator,
