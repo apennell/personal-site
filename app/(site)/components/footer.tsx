@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <p className={typog.body2}>© Annie Pennell 2023</p>
+        <p className={typog.body2}>© Annie Pennell 2024</p>
       </div>
       <div className={styles.footerLinksContainer}>
         <div className={styles.footerLinksGroup}>
