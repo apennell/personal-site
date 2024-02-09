@@ -2,10 +2,13 @@ import typog from "../typog.module.css";
 import styles from "./footer.module.css";
 
 export default function Footer() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <p className={typog.body2}>© Annie Pennell 2024</p>
+        <p className={typog.body2}>© Annie Pennell {year}</p>
       </div>
       <div className={styles.footerLinksContainer}>
         <div className={styles.footerLinksGroup}>
