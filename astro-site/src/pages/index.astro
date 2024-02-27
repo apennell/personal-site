@@ -1,28 +1,31 @@
 ---
-import Layout from "../layouts/default.astro";
+import Layout from "../layouts/Default.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="Annie Pennell | Software Engineer">
+<Layout>
   <section class="block hero">
-    <h1>I leave the web better than I found it.</h1>
-    <p>
-      Ethical software engineering, powered by
-      <a
-        href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        accessibility
-      </a>
-      and
-      <a
-        href="https://www.sustainablewebmanifesto.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        sustainability.
-      </a>
-    </p>
+    <Card size="lg" class="hero-card">
+      <h1>I leave the web better than I found it.</h1>
+      <p>
+        Ethical software engineering, powered by
+        <a
+          href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          accessibility
+        </a>
+        and
+        <a
+          href="https://www.sustainablewebmanifesto.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          sustainability.
+        </a>
+      </p>
+    </Card>
   </section>
 </Layout>
 
@@ -31,5 +34,23 @@ import Layout from "../layouts/default.astro";
     padding: 2rem;
     background-color: var(--purple);
     border-bottom: var(--foreground-border);
+  }
+
+  .hero-card {
+    margin: 2rem auto;
+  }
+
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) {
+    .hero-card {
+      margin: 4rem auto;
+    }
+  }
+
+  /* Large desktop */
+  @media (min-width: 1121px) {
+    .hero {
+      padding: 6rem;
+    }
   }
 </style>

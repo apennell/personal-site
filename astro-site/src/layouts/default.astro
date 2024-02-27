@@ -1,4 +1,14 @@
 ---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Annie Pennell | Software Engineer",
+  description = "Annie Pennell is a software engineer making the web better for the world and the people in it through ethical software engineering, driven by accessibility and sustainable web practices.",
+} = Astro.props;
+
 const navItems = [
   { href: "/about", title: "About", external: false },
   {
@@ -44,11 +54,8 @@ const footerItems = [
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Annie Pennell | About</title>
-    <meta
-      name="description"
-      content="Annie Pennell is a software engineer making the web better for the world and the people in it through ethical software engineering, driven by accessibility and sustainable web practices."
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <header>
