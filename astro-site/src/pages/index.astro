@@ -5,10 +5,10 @@ import Card from "../components/Card.astro";
 
 <Layout>
   <section class="block hero">
-    <Card size="lg" class="hero-card">
-      <h1>I leave the web better than I found it.</h1>
-      <p>
-        Ethical software engineering, powered by
+    <Card size="lg">
+      <h1 class="display">I leave the web better than I found it.</h1>
+      <p class="body1">
+        Ethical software engineering, founded on the principles of
         <a
           href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
           target="_blank"
@@ -31,26 +31,22 @@ import Card from "../components/Card.astro";
 
 <style>
   .hero {
-    padding: 2rem;
+    padding: 5rem 2rem;
     background-color: var(--purple);
     border-bottom: var(--foreground-border);
   }
 
-  .hero-card {
-    margin: 2rem auto;
-  }
-
   /* Tablet and Smaller Desktop */
   @media (min-width: 701px) {
-    .hero-card {
-      margin: 4rem auto;
+    .hero {
+      padding: 10rem 5rem;
     }
   }
 
   /* Large desktop */
   @media (min-width: 1121px) {
     .hero {
-      padding: 6rem;
+      padding: 11rem 6rem;
     }
   }
 </style>
