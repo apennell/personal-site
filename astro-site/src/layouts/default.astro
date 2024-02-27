@@ -67,9 +67,11 @@ const footerItems = [
   </head>
   <body>
     <header>
-      <a href="/" rel="home"
-        ><span aria-hidden="true">&#10039;</span> annie pennell</a
-      >
+      <div>
+        <a href="/" rel="home" class="title-lg">
+          <span aria-hidden="true">&#10039;</span> annie pennell
+        </a>
+      </div>
       <nav>
         {
           navItems.map(({ href, external, title }) => (
@@ -130,21 +132,24 @@ const footerItems = [
     border-top: var(--foreground-border);
   }
 
-  a[rel="home"] {
-    font-family: var(--font-mono);
-    margin-bottom: 0;
+  header > div:first-child {
+    display: flex;
     padding: 1rem;
-    flex-grow: 2;
-    align-self: center;
-    border-bottom: 0;
-
-    /* TODO: add additional typography classes in appropriate place */
-    font-weight: 600;
+    align-items: center;
   }
 
-  /* TODO: style hover like sparkbird */
+  a[rel="home"] {
+    font-family: var(--font-mono);
+    border-bottom: 0;
+  }
+
   a[rel="home"]:hover {
-    color: var(--purple);
+    background-color: var(--green);
+  }
+
+  a[rel="home"] > span {
+    font-size: 3rem;
+    vertical-align: sub;
   }
 
   nav {
