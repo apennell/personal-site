@@ -171,47 +171,52 @@ const footerItems = [
     white-space: nowrap;
   }
 
-  /* TODO: improve alignment of copyright line; fix responsiveness */
   footer {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: stretch;
+    background-color: black;
+    gap: 2px;
+    padding-top: 2px;
   }
 
   footer > div:first-child {
+    display: flex;
     align-self: center;
     flex-grow: 2;
     flex-basis: 100%;
-    border-top: var(--foreground-border);
-    border-bottom: var(--foreground-border);
   }
 
   footer > div:first-child > p {
     padding: 1rem;
     margin: 0;
+    background-color: white;
+    width: 100%;
   }
 
   .links-container {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 2px;
   }
 
   .links-group {
     display: flex;
     text-align: center;
     flex-grow: 1;
-    border-top: var(--foreground-border);
-    border-inline-end: var(--foreground-border);
+    flex-wrap: wrap;
+    gap: 2px;
   }
 
   .link-item {
     padding: 1rem;
-    border-inline-start: var(--foreground-border);
     font-family: var(--font-mono);
     display: flex;
     align-items: center;
     flex-grow: 1;
+    background-color: white;
   }
 
   .link-item > a {
@@ -224,42 +229,20 @@ const footerItems = [
       padding: 1.5rem 2rem;
     }
 
-    .links-container {
-      flex-grow: 1;
-      /* border-inline-end: var(--foreground-border); */
-    }
-
     .links-group {
       border: none;
-      border-top: var(--foreground-border);
     }
 
     footer > div:first-child > p,
     .link-item {
       padding: 1.5rem 2rem;
     }
-
-    .links-group:first-child > .link-item:first-child {
-      border-inline-start: none;
-    }
   }
 
   @media (min-width: 1121px) {
-    footer {
-      border-top: var(--foreground-border);
-      border-bottom: var(--foreground-border);
-    }
-
     footer > div:first-child {
-      border: none;
       flex-basis: auto;
       align-self: stretch;
-      border-inline-end: var(--foreground-border);
-    }
-
-    .links-container,
-    .links-group {
-      border: none;
     }
   }
 </style>
