@@ -5,6 +5,7 @@
 
   --black: #000;
   --white: #fff;
+  --yellow: #fff59f;
   --yellow-lt: #fcffda;
   --green: #b8ff9f;
   --purple: #a8a6ff;
@@ -115,7 +116,7 @@ li {
   padding: 4rem max(5vw, calc((100% - 800px) / 2));
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 2rem;
 }
 
 /* Tablet and Smaller Desktop */
@@ -123,5 +124,6 @@ li {
   .block {
     padding-top: 6rem;
     padding-bottom: 6rem;
+    gap: 3rem;
   }
 }

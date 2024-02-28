@@ -41,12 +41,18 @@
   font-family: var(--font-sans);
 }
 
-.body2 {
+.body2,
+.caption {
   font-size: 0.875rem; /* 14px */
   line-height: 1.25rem; /* 20px */
   letter-spacing: 0.0156em; /* 0.25px */
   font-weight: 400;
   font-family: var(--font-sans);
+}
+
+.caption {
+  font-weight: 600;
+  font-family: var(--font-mono);
 }
 
 .mono-link {
@@ -60,33 +66,34 @@
   letter-spacing: 0.078em; /* 1.25px */
   font-weight: 600;
   text-transform: uppercase;
-  border: 2px solid var(--foreground);
+  border: var(--foreground-border);
   padding: 0.75rem 1.5rem;
   background-color: var(--green);
   transition: all 0.2s ease-in-out;
 }
 
-.button:active {
+.button:hover,
+.button-white:hover {
   background-color: var(--yellow);
+  border-bottom: var(--foreground-border);
+  box-shadow: 2px 2px 0px var(--foreground);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:active {
+  background-color: var(--yellow-lt);
 }
 
 .button-white {
   background-color: var(--background);
 }
 
-.button:hover,
 .button-white:hover {
   background-color: var(--yellow-lt);
-  border-bottom: 2px solid var(--foreground);
-  box-shadow: 2px 2px 0px var(--foreground);
-}
-
-.button-white:hover {
-  background-color: var(--secondary);
 }
 
 .button-white:active {
-  background-color: var(--secondary-dk);
+  background-color: var(--yellow);
 }
 
 .green-bg-title,

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Default.astro";
 import Card from "../components/Card.astro";
+import Testimonial from "../components/Testimonial.astro";
 ---
 
 <Layout>
@@ -29,37 +30,115 @@ import Card from "../components/Card.astro";
   </section>
 
   <section class="block white">
-    <Card size="md">
-      <h2 class="headline">About Annie</h2>
+    <Card size="sm">
+      <h2 class="headline">the gist</h2>
     </Card>
-    <p>
-      As a seasoned software engineer with over 8 years of experience shipping
-      web applications across a range of industries, I am passionate about
-      improving the Internet and its impact by building performant and
-      accessible web applications. I specialize in frontend development, using
-      technologies such as JavaScript/TypeScript, Next.js, Astro, and semantic
-      HTML, and I have a keen eye for design and user experience. I excel at
-      cross-functional collaboration, transforming ambiguity into clarity, and
-      creating state-of-the-art, sustainable systems for my teammates and users.
-    </p>
-    <p>
-      In 2023, I established <a href="https://sparkbird.works" target="_blank"
-        >Sparkbird Works</a
-      >, a studio where I offer freelance engineering, consulting, and coaching
-      services, with a focus on web accessibility (a11y) and sustainability. I
-      help clients create inclusive web products, and I also mentor aspiring
-      developers who want to pursue non-traditional paths in tech. I am always
-      eager to learn, grow, share, and create, and I believe in the power of
-      ethical web development to make a positive impact.
-    </p>
+    <div class="content-container">
+      <p class="body1">
+        As a seasoned software engineer with over 8 years of experience shipping
+        web applications across a range of industries, I am passionate about
+        improving the Internet and its impact by building performant and
+        accessible web applications.
+      </p>
+      <p class="body1">
+        I specialize in frontend development, using technologies such as
+        JavaScript and TypeScript, Next.js, and semantic HTML, and I have a keen
+        eye for design and user experience. I excel at cross-functional
+        collaboration, transforming ambiguity into clarity, and creating
+        state-of-the-art, sustainable systems for my teammates and users.
+      </p>
+    </div>
+    <div class="button-container">
+      <a href="/about" class="button">More about me</a>
+    </div>
+  </section>
+
+  <section class="block green-bg">
+    <Testimonial
+      client={{ name: "John Keck", company: "Voura", title: "Founder and CEO" }}
+      pullQuote="Hiring Annie as a frontend engineering contractor at Voura was one of the best team decisions I’ve made in my career."
+    >
+      <p>
+        She quickly shipped customer-facing UI while elevating the quality of
+        our codebase and building a design system all at the same time. After
+        only a few months, we had reusable components that allowed us to easily
+        add new functionality and user experiences at the drop of a hat.
+      </p>
+      <p>
+        Outside of her technical skills and speed of development, Annie is an
+        amazing collaborator and communicator. I would recommend for anyone
+        needing frontend engineering help to hire Annie. Your project will get
+        done at a very high level and your engineering culture will more likely
+        than not change for the better!
+      </p>
+    </Testimonial>
+  </section>
+
+  <section class="block purple-bg">Services</section>
+
+  <section class="block white">
+    <Testimonial
+      client={{
+        name: "Billy Hollis",
+        company: "Voura",
+        title: "Founding Designer",
+      }}
+      pullQuote="She helped to carve clarity out of ambiguity and ensure that we not only delivered on time, but with the highest quality possible."
+    >
+      <p>
+        Annie is by far the best front end developer I’ve ever had the pleasure
+        of working with. She brings a high quality of excellence to everything
+        she does. She is always thinking about the end user and how to ensure
+        that the front end scales. She thinks both systematically as well as
+        holistically. Annie has a keen eye for design and there were times where
+        I couldn’t tell the difference between my Figma files and production.
+      </p>
+      <p>
+        She challenged and grew my understanding of accessible and sustainable
+        design. Her comments during reviews were so thorough and thoughtful - I
+        can’t say enough. Annie truly levels up anything she works on.
+      </p>
+    </Testimonial>
+  </section>
+
+  <section class="block green-bg">
+    <div class="button-container">
+      <a href="mailto:annie@sparkbird.works" class="button-white">
+        Work with me
+      </a>
+    </div>
   </section>
 </Layout>
 
 <style>
   .hero {
+    display: flex;
+    align-items: center;
     padding: 5rem 2rem;
     background-color: var(--purple);
     border-bottom: var(--foreground-border);
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .button-container {
+    margin: 0 auto;
+  }
+
+  section.block:not(:last-child) {
+    border-bottom: var(--foreground-border);
+  }
+
+  .green-bg {
+    background-color: var(--green);
+  }
+
+  .purple-bg {
+    background-color: var(--purple);
   }
 
   /* Tablet and Smaller Desktop */
