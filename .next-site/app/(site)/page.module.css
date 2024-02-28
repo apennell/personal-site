@@ -1,0 +1,71 @@
+.heroSection {
+  padding: 2rem;
+  background-color: var(--purple);
+  border-bottom: 2px solid var(--foreground);
+}
+
+.heroCard {
+  margin: 2rem auto;
+}
+
+.section {
+  padding: 4rem 2rem;
+  border-bottom: 2px solid var(--foreground);
+}
+
+.greenSection {
+  background-color: var(--green);
+}
+
+.aboutHeadlineSm {
+  display: inline-block;
+}
+
+.bottomSection {
+  padding: 6rem 4rem;
+  background-color: var(--purple);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) {
+  .heroCard {
+    margin: 4rem auto;
+  }
+
+  .section {
+    padding: 6rem 4rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1121px) {
+  .heroSection {
+    padding: 6rem;
+  }
+
+  .section {
+    padding: 6rem;
+  }
+
+  .sectionContainer {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+.aboutHeadlineSm {
+  position: relative;
+}
+
+.aboutHeadlineSm:after {
+  background-color: var(--green);
+  content: " ";
+  height: 65%;
+  position: absolute;
+  left: -0.625rem;
+  top: 0.6rem;
+  width: 100%;
+  z-index: -1;
+}
