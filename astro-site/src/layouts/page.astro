@@ -9,7 +9,9 @@ import Layout from "./Default.astro";
       <slot />
     </div>
 
-    <WorkWithMeBanner />
+    <div class="border-top">
+      <WorkWithMeBanner />
+    </div>
   </div>
 </Layout>
 
@@ -20,5 +22,13 @@ import Layout from "./Default.astro";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .block {
+    gap: 1.25rem;
+  }
+
+  .border-top {
+    border-top: var(--foreground-border);
   }
 </style>

@@ -4,23 +4,32 @@ import Layout from "../layouts/Default.astro";
 ---
 
 <Layout>
-  <div class="block container">
-    <Card size="lg">
-      <h1 class="display">You found the 404 page!</h1>
-      <div class="content-container">
-        <p>
-          If you&apos;re looking for something you think is supposed to exist
-          here, please <a href="mailto:annie@sparkbird.works">let me know!</a>
-        </p>
-        <p>
-          Otherwise, kindly make your way <a href="/">back to the main page.</a>
-        </p>
-      </div>
-    </Card>
+  <div class="page purple-bg">
+    <div class="block container">
+      <Card size="lg">
+        <h1 class="display">You found the 404 page!</h1>
+        <div class="content-container">
+          <p>
+            If you&apos;re looking for something you think is supposed to exist
+            here, please <a href="mailto:annie@sparkbird.works">let me know!</a>
+          </p>
+          <p>
+            Otherwise, kindly make your way <a href="/"
+              >back to the main page.</a
+            >
+          </p>
+        </div>
+      </Card>
+    </div>
   </div>
 </Layout>
 
 <style>
+  .page {
+    align-self: stretch;
+    flex-grow: 2;
+  }
+
   .container {
     display: flex;
     align-items: center;
