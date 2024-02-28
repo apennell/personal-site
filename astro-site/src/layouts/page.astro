@@ -1,9 +1,24 @@
 ---
+import WorkWithMeBanner from "../components/WorkWithMeBanner.astro";
 import Layout from "./Default.astro";
 ---
 
 <Layout>
-  <div class="block">
-    <slot />
+  <div class="container">
+    <div class="block">
+      <slot />
+    </div>
+
+    <WorkWithMeBanner />
   </div>
 </Layout>
+
+<style>
+  .container {
+    align-self: stretch;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+</style>

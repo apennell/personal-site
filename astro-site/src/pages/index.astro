@@ -3,6 +3,7 @@ import Layout from "../layouts/Default.astro";
 import Card from "../components/Card.astro";
 import Testimonial from "../components/Testimonial.astro";
 import Services from "../components/Services.astro";
+import WorkWithMeBanner from "../components/WorkWithMeBanner.astro";
 ---
 
 <Layout>
@@ -104,13 +105,7 @@ import Services from "../components/Services.astro";
     </Testimonial>
   </section>
 
-  <section class="block green-bg">
-    <div class="button-container">
-      <a href="mailto:annie@sparkbird.works" class="button-white">
-        Work with me
-      </a>
-    </div>
-  </section>
+  <WorkWithMeBanner />
 </Layout>
 
 <style>
@@ -120,10 +115,6 @@ import Services from "../components/Services.astro";
     padding: 5rem 2rem;
     background-color: var(--purple);
     border-bottom: var(--foreground-border);
-  }
-
-  .button-container {
-    margin: 0 auto;
   }
 
   section.block:not(:last-child) {

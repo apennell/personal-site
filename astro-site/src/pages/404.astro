@@ -4,7 +4,7 @@ import Layout from "../layouts/Default.astro";
 ---
 
 <Layout>
-  <div class="block">
+  <div class="block container">
     <Card size="lg">
       <h1 class="display">You found the 404 page!</h1>
       <div class="content-container">
@@ -19,3 +19,11 @@ import Layout from "../layouts/Default.astro";
     </Card>
   </div>
 </Layout>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
