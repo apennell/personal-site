@@ -102,6 +102,7 @@ ul {
 
 ul li {
   list-style-type: disclosure-closed;
+  margin-bottom: 0.75rem;
 }
 
 ul ul li {

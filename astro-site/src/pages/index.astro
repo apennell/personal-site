@@ -2,6 +2,7 @@
 import Layout from "../layouts/Default.astro";
 import Card from "../components/Card.astro";
 import Testimonial from "../components/Testimonial.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout>
@@ -29,7 +30,7 @@ import Testimonial from "../components/Testimonial.astro";
     </Card>
   </section>
 
-  <section class="block white">
+  <section class="block">
     <Card size="sm">
       <h2 class="headline">the gist</h2>
     </Card>
@@ -74,9 +75,11 @@ import Testimonial from "../components/Testimonial.astro";
     </Testimonial>
   </section>
 
-  <section class="block purple-bg">Services</section>
+  <section class="block purple-bg">
+    <Services />
+  </section>
 
-  <section class="block white">
+  <section class="block">
     <Testimonial
       client={{
         name: "Billy Hollis",
