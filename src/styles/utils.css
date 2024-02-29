@@ -2,6 +2,10 @@
   white-space: nowrap;
 }
 
+.m-0a {
+  margin: 0 auto;
+}
+
 .green-bg {
   background-color: var(--green);
 }
