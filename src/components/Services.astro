@@ -1,0 +1,61 @@
+---
+import Card from "./Card.astro";
+---
+
+<Card size="md">
+  <h2 class="headline">services & specialties</h2>
+
+  <div>
+    <h3 class="title-sm">
+      Frontend engineering for web applications and websites
+    </h3>
+    <ul>
+      <li>Scalable applications built from the ground up</li>
+      <li>New feature development</li>
+      <li>Maintainable design systems and component libraries</li>
+      <li>Code migrations and refactors</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="title-sm">Consulting, implementation, and team training</h3>
+    <ul>
+      <li>Design systems and component libraries</li>
+      <li>Web accessibility (a11y)</li>
+      <li>
+        Localization (l10n), internationalization (i18n), and translation
+        integrations
+      </li>
+      <li>Sanity.io headless CMS content structuring and integrations</li>
+      <li>
+        Sustainability in web design and development; lower the carbon intensity
+        of your projects to reduce environmental impact <i>and</i> improve web performance
+        at the same time
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="title-sm">
+      Career support and advising for early to mid career folks
+    </h3>
+    <ul>
+      <li>
+        Navigating life after college <i
+          >(&ldquo;help! I got a humanities degree!&rdquo;)</i
+        >
+      </li>
+      <li>Landing your first job out of a coding bootcamp</li>
+      <li>Making tough decisions and evaluating what's next</li>
+    </ul>
+  </div>
+</Card>
+
+<style>
+  ul > li {
+    /* matches body2 */
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+    letter-spacing: 0.0156em; /* 0.25px */
+  }
+</style>

@@ -1,0 +1,68 @@
+---
+interface Props {
+  size?: "sm" | "md" | "lg";
+}
+
+const { size = "md" } = Astro.props;
+---
+
+<div class="container">
+  <div class:list={["box", `box-${size}`]}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 25rem;
+  }
+
+  .box {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding: 2rem;
+    position: relative;
+    background: var(--background);
+    border: var(--foreground-border);
+    box-shadow: 4px 4px 0px var(--foreground);
+  }
+
+  .box-lg {
+    border-width: 4px;
+    box-shadow: 8px 8px 0px var(--foreground);
+  }
+
+  .box-md {
+    padding: 1.5rem;
+  }
+
+  .box-sm {
+    padding: 0.75rem;
+    display: inline-block;
+  }
+
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) {
+    .md-box {
+      padding: 2rem;
+    }
+
+    .sm-box {
+      padding: 0.75rem 1.5rem;
+    }
+
+    .container {
+      max-width: 38rem;
+    }
+  }
+
+  /* Large desktop */
+  @media (min-width: 1121px) {
+    .container {
+      max-width: 50rem;
+    }
+  }
+</style>

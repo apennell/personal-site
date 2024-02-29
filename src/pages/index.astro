@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Default.astro";
+import Card from "../components/Card.astro";
+import Testimonial from "../components/Testimonial.astro";
+import Services from "../components/Services.astro";
+import WorkWithMeBanner from "../components/WorkWithMeBanner.astro";
+---
+
+<Layout>
+  <section class="block hero">
+    <Card size="lg">
+      <h1 class="display">I leave the web better than I found it.</h1>
+      <p class="body1">
+        Ethical software engineering, founded on the principles of
+        <a
+          href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          accessibility
+        </a>
+        and
+        <a
+          href="https://www.sustainablewebmanifesto.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          sustainability.
+        </a>
+      </p>
+    </Card>
+  </section>
+
+  <section class="block">
+    <Card size="sm">
+      <h2 class="headline">the gist</h2>
+    </Card>
+    <div class="content-container">
+      <p class="body1">
+        As a seasoned software engineer with over 8 years of experience shipping
+        web applications across a range of industries, I am passionate about
+        improving the Internet and its impact by building performant and
+        accessible web applications.
+      </p>
+      <p class="body1">
+        I specialize in frontend development, using technologies such as
+        JavaScript and TypeScript, Next.js, and semantic HTML, and I have a keen
+        eye for design and user experience. I excel at cross-functional
+        collaboration, transforming ambiguity into clarity, and creating
+        state-of-the-art, sustainable systems for my teammates and users.
+      </p>
+    </div>
+    <div class="m-0a">
+      <a href="/about" class="button">More about me</a>
+    </div>
+  </section>
+
+  <section class="block green-bg">
+    <Testimonial
+      client={{ name: "John Keck", company: "Voura", title: "Founder and CEO" }}
+      pullQuote="Hiring Annie as a frontend engineering contractor at Voura was one of the best team decisions I’ve made in my career."
+    >
+      <p>
+        She quickly shipped customer-facing UI while elevating the quality of
+        our codebase and building a design system all at the same time. After
+        only a few months, we had reusable components that allowed us to easily
+        add new functionality and user experiences at the drop of a hat.
+      </p>
+      <p>
+        Outside of her technical skills and speed of development, Annie is an
+        amazing collaborator and communicator. I would recommend for anyone
+        needing frontend engineering help to hire Annie. Your project will get
+        done at a very high level and your engineering culture will more likely
+        than not change for the better!
+      </p>
+    </Testimonial>
+  </section>
+
+  <section class="block purple-bg">
+    <Services />
+  </section>
+
+  <section class="block">
+    <Testimonial
+      client={{
+        name: "Billy Hollis",
+        company: "Voura",
+        title: "Founding Designer",
+      }}
+      pullQuote="She helped to carve clarity out of ambiguity and ensure that we not only delivered on time, but with the highest quality possible."
+    >
+      <p>
+        Annie is by far the best front end developer I’ve ever had the pleasure
+        of working with. She brings a high quality of excellence to everything
+        she does. She is always thinking about the end user and how to ensure
+        that the front end scales. She thinks both systematically as well as
+        holistically. Annie has a keen eye for design and there were times where
+        I couldn’t tell the difference between my Figma files and production.
+      </p>
+      <p>
+        She challenged and grew my understanding of accessible and sustainable
+        design. Her comments during reviews were so thorough and thoughtful - I
+        can’t say enough. Annie truly levels up anything she works on.
+      </p>
+    </Testimonial>
+  </section>
+
+  <WorkWithMeBanner />
+</Layout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 5rem 2rem;
+    background-color: var(--purple);
+    border-bottom: var(--foreground-border);
+  }
+
+  section.block:not(:last-child) {
+    border-bottom: var(--foreground-border);
+  }
+
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) {
+    .hero {
+      padding: 10rem 5rem;
+    }
+  }
+
+  /* Large desktop */
+  @media (min-width: 1121px) {
+    .hero {
+      padding: 11rem 6rem;
+    }
+  }
+</style>

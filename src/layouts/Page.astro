@@ -1,0 +1,34 @@
+---
+import WorkWithMeBanner from "../components/WorkWithMeBanner.astro";
+import Layout from "./Default.astro";
+---
+
+<Layout>
+  <div class="container">
+    <div class="block">
+      <slot />
+    </div>
+
+    <div class="border-top">
+      <WorkWithMeBanner />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    align-self: stretch;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .block {
+    gap: 1.25rem;
+  }
+
+  .border-top {
+    border-top: var(--foreground-border);
+  }
+</style>

@@ -1,0 +1,176 @@
+.display,
+.headline,
+.title-sm {
+  font-family: var(--font-mono);
+}
+
+.display {
+  font-size: 2rem; /* 32px */
+  letter-spacing: 0.0156em; /* 0.25px */
+  line-height: 2.875rem; /* 46px */
+  font-weight: 600;
+}
+
+.headline {
+  font-size: 1.3125rem; /* 21px */
+  letter-spacing: 0.0125em; /* 0.2px */
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.title-lg {
+  font-family: var(--font-sans);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 24px */
+  letter-spacing: 0.009em; /* 0.15px */
+  font-weight: 400;
+}
+
+.title-sm {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25; /* 20px */
+  letter-spacing: 0.006em; /* 0.1px */
+  font-weight: 600;
+}
+
+.body1 {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  letter-spacing: 0.0313em; /* 0.5px */
+  font-weight: 400;
+  font-family: var(--font-sans);
+}
+
+.body2,
+.caption {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  letter-spacing: 0.0156em; /* 0.25px */
+  font-weight: 400;
+  font-family: var(--font-sans);
+}
+
+.caption {
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.mono-link {
+  font-family: var(--font-mono);
+}
+
+.button,
+.button-white {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  letter-spacing: 0.078em; /* 1.25px */
+  font-weight: 600;
+  text-transform: uppercase;
+  border: var(--foreground-border);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--green);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover,
+.button-white:hover {
+  background-color: var(--yellow);
+  border-bottom: var(--foreground-border);
+  box-shadow: 2px 2px 0px var(--foreground);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:active {
+  background-color: var(--yellow-lt);
+}
+
+.button-white {
+  background-color: var(--background);
+}
+
+.button-white:hover {
+  background-color: var(--yellow-lt);
+}
+
+.button-white:active {
+  background-color: var(--yellow);
+}
+
+.green-bg-title,
+.purple-bg-title,
+.yellow-bg-title {
+  position: relative;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.green-bg-title:after,
+.purple-bg-title:after,
+.yellow-bg-title:after {
+  content: " ";
+  height: 65%;
+  position: absolute;
+  left: -0.625rem;
+  top: 0.6rem;
+  width: 100%;
+  z-index: -1;
+}
+
+.green-bg-title:after {
+  background-color: var(--green);
+}
+
+.purple-bg-title:after {
+  background-color: var(--purple);
+}
+
+.yellow-bg-title:after {
+  background-color: var(--yellow);
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) {
+  .display {
+    font-size: 2.25rem; /* 36px */
+    letter-spacing: 0.0156em; /* 0.25px */
+  }
+
+  .headline {
+    font-size: 1.625rem; /* 24px */
+    line-height: 2.25rem;
+  }
+
+  .title-lg {
+    font-size: 1.25rem; /* 20px */
+    line-height: 2rem;
+  }
+
+  .title-sm {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+    letter-spacing: 0.0313em; /* 0.5px */
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1121px) {
+  .display {
+    font-size: 3.0625rem; /* 49px */
+    line-height: 4rem;
+  }
+
+  .headline {
+    font-size: 2.1875rem; /* 35px */
+    letter-spacing: 0.0156em; /* 0.25px */
+    line-height: 2.875rem;
+  }
+
+  .title-lg {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2.15rem;
+  }
+
+  .title-sm {
+    font-size: 1.125rem;
+  }
+}

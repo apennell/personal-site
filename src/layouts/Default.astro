@@ -1,0 +1,239 @@
+---
+import "../styles/global.css";
+import "../styles/typography.css";
+import "../styles/utils.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Annie Pennell | Software Engineer",
+  description = "Annie Pennell is a software engineer making the web better for the world and the people in it through ethical software engineering, driven by accessibility and sustainable web practices.",
+} = Astro.props;
+
+const navItems = [
+  { href: "/about", title: "About", external: false },
+  {
+    href: "mailto:annie@sparkbird.works",
+    title: "Contact",
+    external: true,
+  },
+];
+
+const footerItems = [
+  [
+    {
+      href: "https://sparkbird.works",
+      title: "Sparkbird Works ₊⊹⁺˖",
+      external: true,
+    },
+    {
+      href: "https://www.linkedin.com/in/anniepennell/",
+      title: "LinkedIn",
+      external: true,
+    },
+  ],
+  [
+    {
+      href: "https://github.com/apennell",
+      title: "GitHub",
+      external: true,
+    },
+    {
+      href: "mailto:annie@sparkbird.works",
+      title: "annie@sparkbird.works",
+      external: false,
+    },
+  ],
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" rel="home" class="title-lg">
+          <span aria-hidden="true">&#10039;</span> annie pennell
+        </a>
+      </div>
+      <nav>
+        {
+          navItems.map(({ href, external, title }) => (
+            <div>
+              <a
+                href={href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+              >
+                {title}
+              </a>
+            </div>
+          ))
+        }
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div>
+        <div>
+          <p class="body2">© Annie Pennell 2024</p>
+        </div>
+      </div>
+      <div class="links-container">
+        {
+          footerItems.map((group) => (
+            <div class="links-group">
+              {group.map(({ href, external, title }) => (
+                <div class="link-item">
+                  <a
+                    href={href}
+                    target={external ? "_blank" : "_self"}
+                    rel={external ? "noopener noreferrer" : ""}
+                    class="body1"
+                  >
+                    {title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: var(--foreground-border);
+    border-top: var(--foreground-border);
+  }
+
+  header > div:first-child {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  a[rel="home"] {
+    font-family: var(--font-mono);
+    border-bottom: 0;
+  }
+
+  a[rel="home"]:hover {
+    background-color: var(--green);
+  }
+
+  a[rel="home"] > span {
+    font-size: 3rem;
+    vertical-align: sub;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav > div {
+    padding: 1rem;
+    border-inline-start: var(--foreground-border);
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+  }
+
+  nav > div > a {
+    white-space: nowrap;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    background-color: var(--foreground);
+    gap: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  footer > div:first-child {
+    display: flex;
+    flex-grow: 2;
+    align-items: center;
+    background-color: var(--background);
+  }
+
+  footer > div:first-child > div {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .links-container {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    display: flex;
+    gap: 2px;
+  }
+
+  .links-group {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .link-item {
+    padding: 1rem;
+    display: flex;
+    flex-grow: 1;
+    background-color: var(--background);
+  }
+
+  .link-item > a {
+    font-family: var(--font-mono);
+    margin: 0 auto;
+  }
+
+  @media (min-width: 701px) {
+    nav > div {
+      padding: 1.5rem 2rem;
+    }
+
+    .links-group {
+      border: none;
+    }
+
+    footer > div:first-child > div,
+    .link-item {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  @media (min-width: 1121px) {
+    footer > div:first-child {
+      align-self: stretch;
+    }
+  }
+</style>
