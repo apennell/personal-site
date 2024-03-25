@@ -6,18 +6,19 @@ layout: ../layouts/Page.astro
 
 I’ve been a software engineer since 2015, which includes what I call “super full
 stack” development: everything from design and project management all the way to
-backend. Mostly, though, stick to what I really love, which is building on the
-frontend. I am very design- and product-oriented, so I’m great at bridging
-designs to their production build.
+backend. Mostly, though, I stick to what I really love, which is building on the
+frontend. With an educational background in visual arts and the humanities, I am
+very design- and product-oriented, which makes me great at bridging designs to
+their production build and thinking through the full user experience.
 
-After trying my hand at engineering management in 2022, I decided to strike out
-on my own and established [Sparkbird Works](https://sparkbird.works), a studio
-where I can continue to use these skills and others to provide freelance
-engineering, consulting, and coaching services. I’m a huge advocate for
-accessibility (a11y) and sustainability in design and development, and these are
-the backbone of my studio’s work. I am tenacious when it comes to navigating
-complex systems and difficult problems and I love using this skill to help
-others do the same.
+After years of building web applications, then briefly trying my hand at
+engineering management in 2022, I decided to strike out on my own and
+established [Sparkbird Works](https://sparkbird.works), a studio where I can
+continue to use these skills and others to provide freelance engineering,
+consulting, and coaching services. I’m a huge advocate for accessibility (a11y)
+and sustainability in design and development, and these are the backbone of my
+studio’s work. I am tenacious when it comes to navigating complex systems and
+difficult problems and I love using this skill to help others do the same.
 
 On most days, you can find me working from a little office studio in my backyard
 in Richmond, CA, where I enjoy being distracted by the birds who stop by my
