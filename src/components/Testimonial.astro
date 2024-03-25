@@ -1,5 +1,5 @@
 ---
-import Card from "./Card.astro";
+import Card from './Card.astro';
 
 interface Props {
   client: {
@@ -13,79 +13,86 @@ interface Props {
 
 const { client, pullQuote } = Astro.props;
 
-const clientStr = [client.title, client.company].filter(Boolean).join(", ");
+const clientStr = [client.title, client.company].filter(Boolean).join(', ');
 ---
 
 <h2 class="title-sm">kind words</h2>
-<Card size="md">
-  <div class="quote-wrapper">
-    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-    <div class="content-wrapper">
-      <blockquote class="title-lg yellow-bg-title">{pullQuote}</blockquote>
 
-      <div class="quote-body">
-        <slot />
-      </div>
+<div class="center-card">
+  <Card size="md">
+    <div class="quote-wrapper">
+      <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+      <div class="content-wrapper">
+        <blockquote class="title-lg yellow-bg-title">{pullQuote}</blockquote>
 
-      <div>
-        <p class="caption">{client.name}</p>
-        {clientStr && <p class="body2">{clientStr}</p>}
+        <div class="quote-body">
+          <slot />
+        </div>
+
+        <div>
+          <p class="caption">{client.name}</p>
+          {clientStr && <p class="body2">{clientStr}</p>}
+        </div>
       </div>
     </div>
-  </div>
+  </Card>
+</div>
 
-  <style>
+<style>
+  .quote-wrapper {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-wrapper blockquote::after {
+    height: 85%;
+    top: 10%;
+  }
+
+  .quote-mark {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  .quote-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .quote-body p {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+    letter-spacing: 0.0156em; /* 0.25px */
+  }
+
+  .center-card {
+    align-self: center;
+  }
+
+  @media screen and (min-width: 701px) {
     .quote-wrapper {
       display: flex;
-      gap: 0.5rem;
-    }
-
-    .content-wrapper {
-      display: flex;
-      flex-direction: column;
       gap: 1rem;
     }
 
     .content-wrapper blockquote::after {
-      height: 85%;
-      top: 10%;
-    }
-
-    .quote-mark {
-      font-size: 2.5rem;
-      line-height: 2rem;
-      font-family: var(--font-mono);
-      font-weight: 600;
-    }
-
-    .quote-body {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+      height: 65%;
+      top: 20%;
     }
 
     .quote-body p {
-      font-size: 0.875rem; /* 14px */
-      line-height: 1.25rem; /* 20px */
-      letter-spacing: 0.0156em; /* 0.25px */
+      font-size: 1rem; /* 16px */
+      line-height: 1.5rem; /* 24px */
+      letter-spacing: 0.0313em; /* 0.5px */
     }
-
-    @media screen and (min-width: 701px) {
-      .quote-wrapper {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .content-wrapper blockquote::after {
-        height: 65%;
-        top: 20%;
-      }
-
-      .quote-body p {
-        font-size: 1rem; /* 16px */
-        line-height: 1.5rem; /* 24px */
-        letter-spacing: 0.0313em; /* 0.5px */
-      }
-    }
-  </style>
-</Card>
+  }
+</style>

@@ -1,13 +1,13 @@
 ---
 interface Props {
-  size?: "sm" | "md" | "lg";
+  size?: 'sm' | 'md' | 'lg';
 }
 
-const { size = "md" } = Astro.props;
+const { size = 'md' } = Astro.props;
 ---
 
 <div class="container">
-  <div class:list={["box", `box-${size}`]}>
+  <div class:list={['box', `box-${size}`]}>
     <slot />
   </div>
 </div>

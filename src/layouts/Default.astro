@@ -1,7 +1,7 @@
 ---
-import "../styles/global.css";
-import "../styles/typography.css";
-import "../styles/utils.css";
+import '../styles/global.css';
+import '../styles/typography.css';
+import '../styles/utils.css';
 
 interface Props {
   title?: string;
@@ -9,15 +9,15 @@ interface Props {
 }
 
 const {
-  title = "Annie Pennell | Software Engineer",
-  description = "Annie Pennell is a software engineer making the web better for the world and the people in it through ethical software engineering, driven by accessibility and sustainable web practices.",
+  title = 'Annie Pennell | Software Engineer',
+  description = 'Annie Pennell is a software engineer making the web better for the world and the people in it through ethical software engineering, driven by accessibility and sustainable web practices.',
 } = Astro.props;
 
 const navItems = [
-  { href: "/about", title: "About", external: false },
+  { href: '/about', title: 'About', external: false },
   {
-    href: "mailto:annie@sparkbird.works",
-    title: "Contact",
+    href: 'mailto:annie@sparkbird.works',
+    title: 'Contact',
     external: true,
   },
 ];
@@ -25,25 +25,25 @@ const navItems = [
 const footerItems = [
   [
     {
-      href: "https://sparkbird.works",
-      title: "Sparkbird Works ₊⊹⁺˖",
+      href: 'https://sparkbird.works',
+      title: 'Sparkbird Works ₊⊹⁺˖',
       external: true,
     },
     {
-      href: "https://www.linkedin.com/in/anniepennell/",
-      title: "LinkedIn",
+      href: 'https://www.linkedin.com/in/anniepennell/',
+      title: 'LinkedIn',
       external: true,
     },
   ],
   [
     {
-      href: "https://github.com/apennell",
-      title: "GitHub",
+      href: 'https://github.com/apennell',
+      title: 'GitHub',
       external: true,
     },
     {
-      href: "mailto:annie@sparkbird.works",
-      title: "annie@sparkbird.works",
+      href: 'mailto:annie@sparkbird.works',
+      title: 'annie@sparkbird.works',
       external: false,
     },
   ],
@@ -69,7 +69,8 @@ const footerItems = [
     <header>
       <div>
         <a href="/" rel="home" class="title-lg">
-          <span aria-hidden="true">&#10039;</span> annie pennell
+          <span aria-hidden="true" class="logo-icon">&#10039;</span>
+          <span>annie pennell</span>
         </a>
       </div>
       <nav>
@@ -78,8 +79,8 @@ const footerItems = [
             <div>
               <a
                 href={href}
-                target={external ? "_blank" : undefined}
-                rel={external ? "noopener noreferrer" : undefined}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
               >
                 {title}
               </a>
@@ -107,8 +108,8 @@ const footerItems = [
                 <div class="link-item">
                   <a
                     href={href}
-                    target={external ? "_blank" : "_self"}
-                    rel={external ? "noopener noreferrer" : ""}
+                    target={external ? '_blank' : '_self'}
+                    rel={external ? 'noopener noreferrer' : ''}
                     class="body1"
                   >
                     {title}
@@ -138,18 +139,21 @@ const footerItems = [
     align-items: center;
   }
 
-  a[rel="home"] {
+  a[rel='home'] {
     font-family: var(--font-mono);
     border-bottom: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 
-  a[rel="home"]:hover {
+  a[rel='home']:hover {
     background-color: var(--green);
   }
 
-  a[rel="home"] > span {
+  .logo-icon {
     font-size: 3rem;
-    vertical-align: sub;
+    margin-top: -0.4375rem;
   }
 
   nav {
