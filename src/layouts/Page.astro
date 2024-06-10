@@ -1,9 +1,31 @@
 ---
-import WorkWithMeBanner from "../components/WorkWithMeBanner.astro";
-import Layout from "./Default.astro";
+import type { MDXLayoutProps } from 'astro';
+import Hero from '../components/Hero.astro';
+import WorkWithMeBanner from '../components/WorkWithMeBanner.astro';
+import Layout from './Default.astro';
+
+type Props = MDXLayoutProps<{
+  title: string;
+
+  description?: string;
+
+  heading?: string;
+
+  subheading?: string;
+
+  variant?: 'primary' | 'secondary' | 'tertiary';
+}>;
+
+const { frontmatter } = Astro.props;
+const { title, description, heading, subheading, variant } = frontmatter;
 ---
 
-<Layout>
+<Layout title={`${title} | Annie Pennell`} description={description}>
+  {
+    heading && (
+      <Hero heading={heading} subheading={subheading} variant={variant} />
+    )
+  }
   <div class="container">
     <div class="block">
       <slot />
