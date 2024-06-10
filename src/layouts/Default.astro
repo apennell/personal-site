@@ -69,22 +69,27 @@ const footerItems = [
   <body>
     <header>
       <div>
-        <a href="/" rel="home" class="title-lg">
-          <span aria-hidden="true" class="logo-icon">&#10039;</span>
-          <span>annie pennell</span>
-        </a>
+        <div>
+          <a href="/" rel="home" class="title-lg">
+            <span aria-hidden="true" class="logo-icon">&#10039;</span>
+            <span>annie pennell</span>
+          </a>
+        </div>
       </div>
-      <nav>
+      <nav class="links-container">
         {
           navItems.map(({ href, external, title }) => (
-            <div>
-              <a
-                href={href}
-                target={external ? '_blank' : undefined}
-                rel={external ? 'noopener noreferrer' : undefined}
-              >
-                {title}
-              </a>
+            <div class="links-group">
+              <div class="link-item">
+                <a
+                  href={href}
+                  target={external ? '_blank' : undefined}
+                  rel={external ? 'noopener noreferrer' : undefined}
+                  class="body1"
+                >
+                  {title}
+                </a>
+              </div>
             </div>
           ))
         }
@@ -130,14 +135,15 @@ const footerItems = [
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    border-bottom: var(--foreground-border);
-    border-top: var(--foreground-border);
+    flex-wrap: wrap;
+    background-color: var(--foreground);
+    gap: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   header > div:first-child {
-    display: flex;
-    padding: 1rem;
-    align-items: center;
+    padding-right: 2rem;
   }
 
   a[rel='home'] {
@@ -157,22 +163,6 @@ const footerItems = [
     margin-top: -0.4375rem;
   }
 
-  nav {
-    display: flex;
-  }
-
-  nav > div {
-    padding: 1rem;
-    border-inline-start: var(--foreground-border);
-    font-family: var(--font-mono);
-    display: flex;
-    align-items: center;
-  }
-
-  nav > div > a {
-    white-space: nowrap;
-  }
-
   footer {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -183,14 +173,16 @@ const footerItems = [
     padding-bottom: 2px;
   }
 
-  footer > div:first-child {
+  footer > div:first-child,
+  header > div:first-child {
     display: flex;
     flex-grow: 2;
     align-items: center;
     background-color: var(--background);
   }
 
-  footer > div:first-child > div {
+  footer > div:first-child > div,
+  header > div:first-child > div {
     padding: 1rem;
     margin: 0;
   }
@@ -222,10 +214,6 @@ const footerItems = [
   }
 
   @media (min-width: 701px) {
-    nav > div {
-      padding: 1.5rem 2rem;
-    }
-
     .links-group {
       border: none;
     }
@@ -233,6 +221,12 @@ const footerItems = [
     footer > div:first-child > div,
     .link-item {
       padding: 1.5rem 2rem;
+    }
+
+    nav.links-container,
+    nav .links-group,
+    nav .link-item {
+      flex-grow: 0;
     }
   }
 
