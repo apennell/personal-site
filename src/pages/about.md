@@ -1,8 +1,10 @@
 ---
 layout: ../layouts/Page.astro
----
 
-# learn. create. grow. share.
+title: 'About'
+heading: 'learn. create. grow. share.'
+variant: 'tertiary'
+---
 
 I’ve been a software engineer since 2015, which includes what I call “super full
 stack” development: everything from design and project management all the way to
@@ -15,10 +17,14 @@ After years of building web applications, then briefly trying my hand at
 engineering management in 2022, I decided to strike out on my own and
 established [Sparkbird Works](https://sparkbird.works), a studio where I can
 continue to use these skills and others to provide freelance engineering,
-consulting, and coaching services. I’m a huge advocate for accessibility (a11y)
-and sustainability in design and development, and these are the backbone of my
-studio’s work. I am tenacious when it comes to navigating complex systems and
-difficult problems and I love using this skill to help others do the same.
+consulting, and coaching services. In 2024, it was time to return to working on
+a team full-time and I joined the brilliant and collaborative Design Systems
+team at Gusto.
+
+I’m a huge advocate for accessibility (a11y) and sustainability in design and
+development, and these are the backbone of my work, whether in my studio or
+working on a team. I am tenacious when it comes to navigating complex systems
+and difficult problems and I love using this skill to help others do the same.
 
 On most days, you can find me working from a little office studio in my backyard
 in Richmond, CA, where I enjoy being distracted by the birds who stop by my

@@ -4,32 +4,30 @@ import Card from '../components/Card.astro';
 import Testimonial from '../components/Testimonial.astro';
 import Services from '../components/Services.astro';
 import WorkWithMeBanner from '../components/WorkWithMeBanner.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout>
-  <section class="block hero">
-    <Card size="lg">
-      <h1 class="display">I leave the web better than I found it.</h1>
-      <p class="body1">
-        Ethical software engineering, founded on the principles of
-        <a
-          href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          accessibility
-        </a>
-        and
-        <a
-          href="https://www.sustainablewebmanifesto.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          sustainability.
-        </a>
-      </p>
-    </Card>
-  </section>
+  <Hero heading="I leave the web better than I found it." variant="primary">
+    <p class="body1">
+      Ethical software engineering, founded on the principles of
+      <a
+        href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        accessibility
+      </a>
+      and
+      <a
+        href="https://www.sustainablewebmanifesto.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        sustainability.
+      </a>
+    </p>
+  </Hero>
 
   <section class="block">
     <Card size="sm">
@@ -105,7 +103,7 @@ import WorkWithMeBanner from '../components/WorkWithMeBanner.astro';
     </Testimonial>
   </section>
 
-  <WorkWithMeBanner />
+  <WorkWithMeBanner variant="primary" />
 </Layout>
 
 <style>

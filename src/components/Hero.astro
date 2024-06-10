@@ -1,0 +1,80 @@
+---
+import Card from './Card.astro';
+
+interface Props {
+  heading: string;
+
+  subheading?: string;
+
+  variant?: 'primary' | 'secondary' | 'tertiary';
+}
+
+const { variant = 'secondary', heading, subheading } = Astro.props;
+const variantSizes = {
+  primary: 'lg',
+  secondary: 'md',
+  tertiary: 'sm',
+}[variant] as 'sm' | 'md' | 'lg';
+---
+
+<section class={`block hero ${variant}`}>
+  <Card size={variantSizes}>
+    <h1 class={variant === 'tertiary' ? 'headline' : 'display'}>{heading}</h1>
+    {subheading && <p class="body1">{subheading}</p>}
+    <slot />
+  </Card>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: var(--green);
+    border-bottom: var(--foreground-border);
+  }
+
+  .primary {
+    background-color: var(--purple);
+    padding: 5rem 2rem;
+  }
+
+  .tertiary {
+    background-color: var(--yellow);
+    padding: 2rem 2rem;
+  }
+
+  section.block {
+    border-bottom: var(--foreground-border);
+  }
+
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) {
+    .hero {
+      padding: 6rem 5rem;
+    }
+
+    .primary {
+      padding: 10rem 5rem;
+    }
+
+    .tertiary {
+      padding: 4rem 5rem;
+    }
+  }
+
+  /* Large desktop */
+  @media (min-width: 1121px) {
+    .hero {
+      padding: 8rem 6rem;
+    }
+
+    .primary {
+      padding: 11rem 6rem;
+    }
+
+    .tertiary {
+      padding: 6rem 6rem;
+    }
+  }
+</style>

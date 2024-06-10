@@ -1,4 +1,18 @@
-<section class="block green-bg">
+---
+interface Props {
+  variant?: 'primary' | 'secondary' | 'tertiary';
+}
+
+const { variant = 'secondary' } = Astro.props;
+
+const bgColors = {
+  primary: 'green-bg',
+  secondary: 'purple-bg',
+  tertiary: 'purple-bg',
+}[variant];
+---
+
+<section class={`block ${bgColors}`}>
   <div class="m-0a">
     <a href="mailto:annie@sparkbird.works" class="button-white">
       Work with me
