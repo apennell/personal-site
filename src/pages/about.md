@@ -9,7 +9,7 @@ variant: 'tertiary'
 I’ve been a software engineer since 2015, which includes what I call “super full
 stack” development: everything from design and project management all the way to
 backend. Mostly, though, I stick to what I really love, which is building on the
-frontend. With an educational background in visual arts and the humanities, I am
+frontend. With an education background in visual arts and the humanities, I am
 very design- and product-oriented, which makes me great at bridging designs to
 their production build and thinking through the full user experience.
 
