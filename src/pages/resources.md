@@ -24,15 +24,13 @@ begin learning, find community, and stay on top of the latest news.
   Guidelines (WSG) 1.0</a>
 - <a href="https://sustainablewebdesign.org/" target="_blank">Sustainable Web
   Design</a>
-- <a href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-low-tech-website/" target="_blank">"How
-  to Build a Low-tech Website?"</a>
 
 ## communities
 
 - <a href="https://climateaction.tech/" target="_blank">ClimateAction.Tech</a>
 - <a href="https://workonclimate.org/" target="_blank">Work on Climate</a>
-- <a href="https://www.w3.org/community/sustyweb/" target="_blank">W3C
-  Sustainable Web Design Community Group</a>
+- <a href="https://www.w3.org/groups/ig/sustainableweb/" target="_blank">W3C
+  Sustainable Web Interest Group</a>
 
 ## books
 
